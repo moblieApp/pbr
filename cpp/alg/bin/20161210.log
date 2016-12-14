@@ -1,0 +1,282 @@
+nohup: ignoring input
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1210 19:30:31.180398   457 model_helper.cpp:163] Decrypt binary file ...
+I1210 19:30:31.718623   457 model_helper.cpp:168] Split mean file ...
+I1210 19:30:31.718700   457 model_helper.cpp:182] Split model to prototxt and caffemodel ...
+I1210 19:30:32.121654   457 net.cpp:301] This network produces output label
+I1210 19:30:32.121742   457 net.cpp:301] This network produces output output
+I1210 19:30:32.121899   457 net.cpp:314] Network initialization done.
+Successed to create handle.
+Test batch interface.
+len:89
+/home/app/relation/958.txt
+image_number:240
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/958.txt
+/home/app/relation/1006.txt
+image_number:464
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1006.txt
+/home/app/relation/1229.txt
+image_number:667
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1229.txt
+/home/app/relation/438.txt
+image_number:797
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/438.txt
+/home/app/relation/4.txt
+image_number:904
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/4.txt
+/home/app/relation/21.txt
+image_number:1022
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/21.txt
+/home/app/relation/243.txt
+image_number:1250
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/243.txt
+/home/app/relation/657.txt
+image_number:1519
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/657.txt
+/home/app/relation/606.txt
+image_number:1688
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/606.txt
+/home/app/relation/885.txt
+image_number:1843
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/885.txt
+/home/app/relation/540.txt
+image_number:2038
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/540.txt
+/home/app/relation/747.txt
+image_number:2204
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/747.txt
+/home/app/relation/385.txt
+image_number:2370
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/385.txt
+/home/app/relation/1137.txt
+image_number:2498
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1137.txt
+/home/app/relation/479.txt
+image_number:2687
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/479.txt
+/home/app/relation/64.txt
+image_number:2853
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/64.txt
+/home/app/relation/509.txt
+image_number:3052
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/509.txt
+/home/app/relation/1164.txt
+image_number:3247
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1164.txt
+/home/app/relation/781.txt
+image_number:3466
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/781.txt
+/home/app/relation/139.txt
+image_number:3564
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/139.txt
+/home/app/relation/794.txt
+image_number:3698
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/794.txt
+/home/app/relation/1200.txt
+image_number:3808
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1200.txt
+/home/app/relation/1088.txt
+image_number:3930
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1088.txt
+/home/app/relation/1063.txt
+image_number:4088
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1063.txt
+/home/app/relation/671.txt
+image_number:4234
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/671.txt
+/home/app/relation/12.txt
+image_number:4332
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/12.txt
+/home/app/relation/803.txt
+image_number:4442
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/803.txt
+/home/app/relation/1098.txt
+image_number:4576
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1098.txt
+/home/app/relation/816.txt
+image_number:4736
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/816.txt
+/home/app/relation/1149.txt
+image_number:4896
+prediction_page:958
+dims:1024
+date_feature len:0
+date_feature len:2
+date_feature len:2
+date_feature len:4
+/home/app/feas/1149.txt
+/home/app/relation/1245.txt

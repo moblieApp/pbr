@@ -1,0 +1,2 @@
+/bin/ar cr libutilscpp.a  CMakeFiles/utilscpp.dir/utils/base64.cpp.o
+/bin/ranlib libutilscpp.a

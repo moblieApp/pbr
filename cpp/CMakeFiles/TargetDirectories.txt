@@ -1,0 +1,4 @@
+/home/app/project/test/cpp/CMakeFiles/TutorialClient.dir
+/home/app/project/test/cpp/CMakeFiles/TutorialServer.dir
+/home/app/project/test/cpp/CMakeFiles/tutorialgencpp.dir
+/home/app/project/test/cpp/CMakeFiles/utilscpp.dir

@@ -1,0 +1,1 @@
+/bin/c++   -fPIC -std=c++11    CMakeFiles/TutorialClient.dir/CppClient.cpp.o  -o TutorialClient  -L/home/app/project/test/cpp/alg/lib -rdynamic libtutorialgencpp.a -lthrift -Wl,-rpath,/home/app/project/test/cpp/alg/lib 

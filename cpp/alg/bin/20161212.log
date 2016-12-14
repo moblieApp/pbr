@@ -1,0 +1,993 @@
+nohup: ignoring input
+start create:2016-12-12-17:56:18
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1212 17:56:23.673025 29988 model_helper.cpp:163] Decrypt binary file ...
+I1212 17:56:24.212141 29988 model_helper.cpp:168] Split mean file ...
+I1212 17:56:24.212218 29988 model_helper.cpp:182] Split model to prototxt and caffemodel ...
+I1212 17:56:24.609923 29988 net.cpp:301] This network produces output label
+I1212 17:56:24.609993 29988 net.cpp:301] This network produces output output
+I1212 17:56:24.610152 29988 net.cpp:314] Network initialization done.
+Successed to create handle.
+end create:2016-12-12-17:56:24
+Test batch interface.
+len:89
+/home/app/relation/958.txt
+readDb & this time start:2016-12-12-17:56:24
+readDb end:2016-12-12-17:56:24
+agl start:2016-12-12-17:56:31
+agl end:2016-12-12-18:04:11
+cost:2782.04
+image_number:240
+prediction_page:958
+dims:1024
+/home/app/feas/958.txt
+this time end:2016-12-12-18:04:11
+/home/app/relation/1006.txt
+readDb & this time start:2016-12-12-18:04:11
+readDb end:2016-12-12-18:04:11
+agl start:2016-12-12-18:04:18
+agl end:2016-12-12-18:11:34
+cost:2613.11
+image_number:224
+prediction_page:1006
+dims:1024
+/home/app/feas/1006.txt
+this time end:2016-12-12-18:11:35
+/home/app/relation/1229.txt
+readDb & this time start:2016-12-12-18:11:35
+readDb end:2016-12-12-18:11:35
+agl start:2016-12-12-18:11:41
+agl end:2016-12-12-18:18:19
+cost:2365.36
+image_number:203
+prediction_page:1229
+dims:1024
+/home/app/feas/1229.txt
+this time end:2016-12-12-18:18:19
+/home/app/relation/438.txt
+readDb & this time start:2016-12-12-18:18:19
+readDb end:2016-12-12-18:18:19
+agl start:2016-12-12-18:18:23
+agl end:2016-12-12-18:22:26
+cost:1501.47
+image_number:130
+prediction_page:438
+dims:1024
+/home/app/feas/438.txt
+this time end:2016-12-12-18:22:26
+/home/app/relation/4.txt
+readDb & this time start:2016-12-12-18:22:26
+readDb end:2016-12-12-18:22:26
+agl start:2016-12-12-18:22:29
+agl end:2016-12-12-18:26:03
+cost:1249.13
+image_number:107
+prediction_page:4
+dims:1024
+/home/app/feas/4.txt
+this time end:2016-12-12-18:26:03
+/home/app/relation/21.txt
+readDb & this time start:2016-12-12-18:26:03
+readDb end:2016-12-12-18:26:03
+agl start:2016-12-12-18:26:07
+agl end:2016-12-12-18:30:04
+cost:1378.02
+image_number:118
+prediction_page:21
+dims:1024
+/home/app/feas/21.txt
+this time end:2016-12-12-18:30:04
+/home/app/relation/243.txt
+readDb & this time start:2016-12-12-18:30:04
+readDb end:2016-12-12-18:30:04
+agl start:2016-12-12-18:30:11
+agl end:2016-12-12-18:37:35
+cost:2657.94
+image_number:228
+prediction_page:243
+dims:1024
+/home/app/feas/243.txt
+this time end:2016-12-12-18:37:35
+/home/app/relation/657.txt
+readDb & this time start:2016-12-12-18:37:35
+readDb end:2016-12-12-18:37:35
+agl start:2016-12-12-18:37:43
+agl end:2016-12-12-18:46:00
+cost:3092.44
+image_number:269
+prediction_page:657
+dims:1024
+/home/app/feas/657.txt
+this time end:2016-12-12-18:46:00
+/home/app/relation/606.txt
+readDb & this time start:2016-12-12-18:46:00
+readDb end:2016-12-12-18:46:00
+agl start:2016-12-12-18:46:06
+agl end:2016-12-12-18:51:21
+cost:1945.89
+image_number:169
+prediction_page:606
+dims:1024
+/home/app/feas/606.txt
+this time end:2016-12-12-18:51:22
+/home/app/relation/885.txt
+readDb & this time start:2016-12-12-18:51:22
+readDb end:2016-12-12-18:51:22
+agl start:2016-12-12-18:51:26
+agl end:2016-12-12-18:56:51
+cost:1823.12
+image_number:155
+prediction_page:885
+dims:1024
+/home/app/feas/885.txt
+this time end:2016-12-12-18:56:51
+/home/app/relation/540.txt
+readDb & this time start:2016-12-12-18:56:51
+readDb end:2016-12-12-18:56:51
+agl start:2016-12-12-18:56:57
+agl end:2016-12-12-19:03:22
+cost:2274.08
+image_number:195
+prediction_page:540
+dims:1024
+/home/app/feas/540.txt
+this time end:2016-12-12-19:03:22
+/home/app/relation/747.txt
+readDb & this time start:2016-12-12-19:03:22
+readDb end:2016-12-12-19:03:22
+agl start:2016-12-12-19:03:27
+agl end:2016-12-12-19:08:47
+cost:1933.8
+image_number:166
+prediction_page:747
+dims:1024
+/home/app/feas/747.txt
+this time end:2016-12-12-19:08:47
+/home/app/relation/385.txt
+readDb & this time start:2016-12-12-19:08:47
+readDb end:2016-12-12-19:08:47
+agl start:2016-12-12-19:08:52
+agl end:2016-12-12-19:14:07
+cost:1925.3
+image_number:166
+prediction_page:385
+dims:1024
+/home/app/feas/385.txt
+this time end:2016-12-12-19:14:07
+/home/app/relation/1137.txt
+readDb & this time start:2016-12-12-19:14:07
+readDb end:2016-12-12-19:14:07
+agl start:2016-12-12-19:14:10
+agl end:2016-12-12-19:18:23
+cost:1495.23
+image_number:128
+prediction_page:1137
+dims:1024
+/home/app/feas/1137.txt
+this time end:2016-12-12-19:18:23
+/home/app/relation/479.txt
+readDb & this time start:2016-12-12-19:18:23
+readDb end:2016-12-12-19:18:23
+agl start:2016-12-12-19:18:29
+agl end:2016-12-12-19:24:29
+cost:2189.32
+image_number:189
+prediction_page:479
+dims:1024
+/home/app/feas/479.txt
+this time end:2016-12-12-19:24:29
+/home/app/relation/64.txt
+readDb & this time start:2016-12-12-19:24:29
+readDb end:2016-12-12-19:24:29
+agl start:2016-12-12-19:24:34
+agl end:2016-12-12-19:30:00
+cost:1920.85
+image_number:166
+prediction_page:64
+dims:1024
+/home/app/feas/64.txt
+this time end:2016-12-12-19:30:00
+/home/app/relation/509.txt
+readDb & this time start:2016-12-12-19:30:00
+readDb end:2016-12-12-19:30:00
+agl start:2016-12-12-19:30:07
+agl end:2016-12-12-19:37:42
+cost:2294.75
+image_number:199
+prediction_page:509
+dims:1024
+/home/app/feas/509.txt
+this time end:2016-12-12-19:37:42
+/home/app/relation/1164.txt
+readDb & this time start:2016-12-12-19:37:42
+readDb end:2016-12-12-19:37:42
+agl start:2016-12-12-19:37:49
+agl end:2016-12-12-19:44:10
+cost:2267.94
+image_number:195
+prediction_page:1164
+dims:1024
+/home/app/feas/1164.txt
+this time end:2016-12-12-19:44:10
+/home/app/relation/781.txt
+readDb & this time start:2016-12-12-19:44:10
+readDb end:2016-12-12-19:44:10
+agl start:2016-12-12-19:44:17
+agl end:2016-12-12-19:51:15
+cost:2559.94
+image_number:219
+prediction_page:781
+dims:1024
+/home/app/feas/781.txt
+this time end:2016-12-12-19:51:15
+/home/app/relation/139.txt
+readDb & this time start:2016-12-12-19:51:15
+readDb end:2016-12-12-19:51:15
+agl start:2016-12-12-19:51:18
+agl end:2016-12-12-19:54:24
+cost:1143.75
+image_number:98
+prediction_page:139
+dims:1024
+/home/app/feas/139.txt
+this time end:2016-12-12-19:54:24
+/home/app/relation/794.txt
+readDb & this time start:2016-12-12-19:54:24
+readDb end:2016-12-12-19:54:24
+agl start:2016-12-12-19:54:28
+agl end:2016-12-12-19:58:50
+cost:1568.25
+image_number:134
+prediction_page:794
+dims:1024
+/home/app/feas/794.txt
+this time end:2016-12-12-19:58:50
+/home/app/relation/1200.txt
+readDb & this time start:2016-12-12-19:58:50
+readDb end:2016-12-12-19:58:50
+agl start:2016-12-12-19:58:53
+agl end:2016-12-12-20:02:29
+cost:1292.79
+image_number:110
+prediction_page:1200
+dims:1024
+/home/app/feas/1200.txt
+this time end:2016-12-12-20:02:29
+/home/app/relation/1088.txt
+readDb & this time start:2016-12-12-20:02:29
+readDb end:2016-12-12-20:02:29
+agl start:2016-12-12-20:02:33
+agl end:2016-12-12-20:06:16
+cost:1420.7
+image_number:122
+prediction_page:1088
+dims:1024
+/home/app/feas/1088.txt
+this time end:2016-12-12-20:06:16
+/home/app/relation/1063.txt
+readDb & this time start:2016-12-12-20:06:16
+readDb end:2016-12-12-20:06:16
+agl start:2016-12-12-20:06:21
+agl end:2016-12-12-20:12:15
+cost:1874.41
+image_number:158
+prediction_page:1063
+dims:1024
+/home/app/feas/1063.txt
+this time end:2016-12-12-20:12:15
+/home/app/relation/671.txt
+readDb & this time start:2016-12-12-20:12:15
+readDb end:2016-12-12-20:12:15
+agl start:2016-12-12-20:12:20
+agl end:2016-12-12-20:17:58
+cost:1719.76
+image_number:146
+prediction_page:671
+dims:1024
+/home/app/feas/671.txt
+this time end:2016-12-12-20:17:58
+/home/app/relation/12.txt
+readDb & this time start:2016-12-12-20:17:58
+readDb end:2016-12-12-20:17:58
+agl start:2016-12-12-20:18:02
+agl end:2016-12-12-20:21:27
+cost:1111.16
+image_number:98
+prediction_page:12
+dims:1024
+/home/app/feas/12.txt
+this time end:2016-12-12-20:21:27
+/home/app/relation/803.txt
+readDb & this time start:2016-12-12-20:21:27
+readDb end:2016-12-12-20:21:27
+agl start:2016-12-12-20:21:30
+agl end:2016-12-12-20:25:02
+cost:1290.77
+image_number:110
+prediction_page:803
+dims:1024
+/home/app/feas/803.txt
+this time end:2016-12-12-20:25:02
+/home/app/relation/1098.txt
+readDb & this time start:2016-12-12-20:25:02
+readDb end:2016-12-12-20:25:02
+agl start:2016-12-12-20:25:06
+agl end:2016-12-12-20:29:36
+cost:1578.59
+image_number:134
+prediction_page:1098
+dims:1024
+/home/app/feas/1098.txt
+this time end:2016-12-12-20:29:36
+/home/app/relation/816.txt
+readDb & this time start:2016-12-12-20:29:36
+readDb end:2016-12-12-20:29:36
+agl start:2016-12-12-20:29:41
+agl end:2016-12-12-20:34:47
+cost:1868.47
+image_number:160
+prediction_page:816
+dims:1024
+/home/app/feas/816.txt
+this time end:2016-12-12-20:34:47
+/home/app/relation/1149.txt
+readDb & this time start:2016-12-12-20:34:47
+readDb end:2016-12-12-20:34:47
+agl start:2016-12-12-20:34:53
+agl end:2016-12-12-20:39:54
+cost:1858.86
+image_number:160
+prediction_page:1149
+dims:1024
+/home/app/feas/1149.txt
+this time end:2016-12-12-20:39:54
+/home/app/relation/1245.txt
+readDb & this time start:2016-12-12-20:39:54
+readDb end:2016-12-12-20:39:54
+agl start:2016-12-12-20:40:01
+agl end:2016-12-12-20:46:36
+cost:2461.63
+image_number:211
+prediction_page:1245
+dims:1024
+/home/app/feas/1245.txt
+this time end:2016-12-12-20:46:36
+/home/app/relation/185.txt
+readDb & this time start:2016-12-12-20:46:36
+readDb end:2016-12-12-20:46:36
+agl start:2016-12-12-20:46:44
+agl end:2016-12-12-20:54:53
+cost:2878.06
+image_number:246
+prediction_page:185
+dims:1024
+/home/app/feas/185.txt
+this time end:2016-12-12-20:54:54
+/home/app/relation/151.txt
+readDb & this time start:2016-12-12-20:54:54
+readDb end:2016-12-12-20:54:54
+agl start:2016-12-12-20:54:59
+agl end:2016-12-12-21:00:43
+cost:2045.63
+image_number:175
+prediction_page:151
+dims:1024
+/home/app/feas/151.txt
+this time end:2016-12-12-21:00:43
+/home/app/relation/217.txt
+readDb & this time start:2016-12-12-21:00:43
+readDb end:2016-12-12-21:00:43
+agl start:2016-12-12-21:00:49
+agl end:2016-12-12-21:06:43
+cost:2144.72
+image_number:183
+prediction_page:217
+dims:1024
+/home/app/feas/217.txt
+this time end:2016-12-12-21:06:44
+/home/app/relation/839.txt
+readDb & this time start:2016-12-12-21:06:44
+readDb end:2016-12-12-21:06:44
+agl start:2016-12-12-21:06:50
+agl end:2016-12-12-21:13:33
+cost:2389.83
+image_number:204
+prediction_page:839
+dims:1024
+/home/app/feas/839.txt
+this time end:2016-12-12-21:13:33
+/home/app/relation/927.txt
+readDb & this time start:2016-12-12-21:13:33
+readDb end:2016-12-12-21:13:33
+agl start:2016-12-12-21:13:39
+agl end:2016-12-12-21:20:19
+cost:2295.31
+image_number:196
+prediction_page:927
+dims:1024
+/home/app/feas/927.txt
+this time end:2016-12-12-21:20:19
+/home/app/relation/942.txt
+readDb & this time start:2016-12-12-21:20:19
+readDb end:2016-12-12-21:20:19
+agl start:2016-12-12-21:20:25
+agl end:2016-12-12-21:25:41
+cost:1980.35
+image_number:170
+prediction_page:942
+dims:1024
+/home/app/feas/942.txt
+this time end:2016-12-12-21:25:41
+/home/app/relation/317.txt
+readDb & this time start:2016-12-12-21:25:41
+readDb end:2016-12-12-21:25:41
+agl start:2016-12-12-21:25:47
+agl end:2016-12-12-21:31:51
+cost:2139.28
+image_number:182
+prediction_page:317
+dims:1024
+/home/app/feas/317.txt
+this time end:2016-12-12-21:31:51
+/home/app/relation/763.txt
+readDb & this time start:2016-12-12-21:31:51
+readDb end:2016-12-12-21:31:51
+agl start:2016-12-12-21:31:58
+agl end:2016-12-12-21:39:09
+cost:2573.97
+image_number:219
+prediction_page:763
+dims:1024
+/home/app/feas/763.txt
+this time end:2016-12-12-21:39:10
+/home/app/relation/1176.txt
+readDb & this time start:2016-12-12-21:39:10
+readDb end:2016-12-12-21:39:10
+agl start:2016-12-12-21:39:13
+agl end:2016-12-12-21:43:27
+cost:1483.75
+image_number:126
+prediction_page:1176
+dims:1024
+/home/app/feas/1176.txt
+this time end:2016-12-12-21:43:27
+/home/app/relation/988.txt
+readDb & this time start:2016-12-12-21:43:27
+readDb end:2016-12-12-21:43:27
+agl start:2016-12-12-21:43:35
+agl end:2016-12-12-21:51:08
+cost:2818.87
+image_number:242
+prediction_page:988
+dims:1024
+/home/app/feas/988.txt
+this time end:2016-12-12-21:51:08
+/home/app/relation/913.txt
+readDb & this time start:2016-12-12-21:51:08
+readDb end:2016-12-12-21:51:08
+agl start:2016-12-12-21:51:14
+agl end:2016-12-12-21:56:51
+cost:1995.11
+image_number:171
+prediction_page:913
+dims:1024
+/home/app/feas/913.txt
+this time end:2016-12-12-21:56:51
+/home/app/relation/129.txt
+readDb & this time start:2016-12-12-21:56:51
+readDb end:2016-12-12-21:56:51
+agl start:2016-12-12-21:56:57
+agl end:2016-12-12-22:02:30
+cost:2119.26
+image_number:184
+prediction_page:129
+dims:1024
+/home/app/feas/129.txt
+this time end:2016-12-12-22:02:30
+/home/app/relation/91.txt
+readDb & this time start:2016-12-12-22:02:30
+readDb end:2016-12-12-22:02:30
+agl start:2016-12-12-22:02:36
+agl end:2016-12-12-22:08:16
+cost:2097.49
+image_number:181
+prediction_page:91
+dims:1024
+/home/app/feas/91.txt
+this time end:2016-12-12-22:08:16
+/home/app/relation/363.txt
+readDb & this time start:2016-12-12-22:08:16
+readDb end:2016-12-12-22:08:16
+agl start:2016-12-12-22:08:23
+agl end:2016-12-12-22:15:43
+cost:2680.56
+image_number:230
+prediction_page:363
+dims:1024
+/home/app/feas/363.txt
+this time end:2016-12-12-22:15:44
+/home/app/relation/101.txt
+readDb & this time start:2016-12-12-22:15:44
+readDb end:2016-12-12-22:15:44
+agl start:2016-12-12-22:15:46
+agl end:2016-12-12-22:18:34
+cost:1006.33
+image_number:86
+prediction_page:101
+dims:1024
+/home/app/feas/101.txt
+this time end:2016-12-12-22:18:34
+/home/app/relation/1190.txt
+readDb & this time start:2016-12-12-22:18:34
+readDb end:2016-12-12-22:18:34
+agl start:2016-12-12-22:18:40
+agl end:2016-12-12-22:25:08
+cost:2256.05
+image_number:191
+prediction_page:1190
+dims:1024
+/home/app/feas/1190.txt
+this time end:2016-12-12-22:25:08
+/home/app/relation/623.txt
+readDb & this time start:2016-12-12-22:25:08
+readDb end:2016-12-12-22:25:08
+agl start:2016-12-12-22:25:15
+agl end:2016-12-12-22:33:01
+cost:2734.35
+image_number:233
+prediction_page:623
+dims:1024
+/home/app/feas/623.txt
+this time end:2016-12-12-22:33:01
+/home/app/relation/1038.txt
+readDb & this time start:2016-12-12-22:33:01
+readDb end:2016-12-12-22:33:01
+agl start:2016-12-12-22:33:07
+agl end:2016-12-12-22:39:31
+cost:2212.57
+image_number:187
+prediction_page:1038
+dims:1024
+/home/app/feas/1038.txt
+this time end:2016-12-12-22:39:31
+/home/app/relation/287.txt
+readDb & this time start:2016-12-12-22:39:31
+readDb end:2016-12-12-22:39:31
+agl start:2016-12-12-22:39:36
+agl end:2016-12-12-22:45:52
+cost:2163.88
+image_number:184
+prediction_page:287
+dims:1024
+/home/app/feas/287.txt
+this time end:2016-12-12-22:45:53
+/home/app/relation/1112.txt
+readDb & this time start:2016-12-12-22:45:53
+readDb end:2016-12-12-22:45:53
+agl start:2016-12-12-22:45:58
+agl end:2016-12-12-22:52:37
+cost:2313.88
+image_number:197
+prediction_page:1112
+dims:1024
+/home/app/feas/1112.txt
+this time end:2016-12-12-22:52:37
+/home/app/relation/555.txt
+readDb & this time start:2016-12-12-22:52:37
+readDb end:2016-12-12-22:52:37
+agl start:2016-12-12-22:52:43
+agl end:2016-12-12-22:59:05
+cost:2170.99
+image_number:184
+prediction_page:555
+dims:1024
+/home/app/feas/555.txt
+this time end:2016-12-12-22:59:05
+/home/app/relation/415.txt
+readDb & this time start:2016-12-12-22:59:05
+readDb end:2016-12-12-22:59:05
+agl start:2016-12-12-22:59:09
+agl end:2016-12-12-23:03:26
+cost:1499.42
+image_number:128
+prediction_page:415
+dims:1024
+/home/app/feas/415.txt
+this time end:2016-12-12-23:03:26
+/home/app/relation/1214.txt
+readDb & this time start:2016-12-12-23:03:26
+readDb end:2016-12-12-23:03:26
+agl start:2016-12-12-23:03:32
+agl end:2016-12-12-23:09:46
+cost:2182.49
+image_number:186
+prediction_page:1214
+dims:1024
+/home/app/feas/1214.txt
+this time end:2016-12-12-23:09:46
+/home/app/relation/272.txt
+readDb & this time start:2016-12-12-23:09:46
+readDb end:2016-12-12-23:09:46
+agl start:2016-12-12-23:09:52
+agl end:2016-12-12-23:15:49
+cost:2232.21
+image_number:193
+prediction_page:272
+dims:1024
+/home/app/feas/272.txt
+this time end:2016-12-12-23:15:49
+/home/app/relation/228.txt
+readDb & this time start:2016-12-12-23:15:49
+readDb end:2016-12-12-23:15:49
+agl start:2016-12-12-23:15:52
+agl end:2016-12-12-23:18:59
+cost:1118.37
+image_number:96
+prediction_page:228
+dims:1024
+/home/app/feas/228.txt
+this time end:2016-12-12-23:18:59
+/home/app/relation/580.txt
+readDb & this time start:2016-12-12-23:18:59
+readDb end:2016-12-12-23:18:59
+agl start:2016-12-12-23:19:04
+agl end:2016-12-12-23:24:36
+cost:1885.4
+image_number:160
+prediction_page:580
+dims:1024
+/home/app/feas/580.txt
+this time end:2016-12-12-23:24:36
+/home/app/relation/451.txt
+readDb & this time start:2016-12-12-23:24:36
+readDb end:2016-12-12-23:24:36
+agl start:2016-12-12-23:24:41
+agl end:2016-12-12-23:30:15
+cost:2021.6
+image_number:174
+prediction_page:451
+dims:1024
+/home/app/feas/451.txt
+this time end:2016-12-12-23:30:16
+/home/app/relation/167.txt
+readDb & this time start:2016-12-12-23:30:16
+readDb end:2016-12-12-23:30:16
+agl start:2016-12-12-23:30:21
+agl end:2016-12-12-23:36:31
+cost:2169.41
+image_number:185
+prediction_page:167
+dims:1024
+/home/app/feas/167.txt
+this time end:2016-12-12-23:36:31
+/home/app/relation/333.txt
+readDb & this time start:2016-12-12-23:36:31
+readDb end:2016-12-12-23:36:31
+agl start:2016-12-12-23:36:37
+agl end:2016-12-12-23:42:36
+cost:2167.21
+image_number:186
+prediction_page:333
+dims:1024
+/home/app/feas/333.txt
+this time end:2016-12-12-23:42:36
+/home/app/relation/35.txt
+readDb & this time start:2016-12-12-23:42:36
+readDb end:2016-12-12-23:42:36
+agl start:2016-12-12-23:42:42
+agl end:2016-12-12-23:49:38
+cost:2467.56
+image_number:211
+prediction_page:35
+dims:1024
+/home/app/feas/35.txt
+this time end:2016-12-12-23:49:38
+/home/app/relation/1076.txt
+readDb & this time start:2016-12-12-23:49:38
+readDb end:2016-12-12-23:49:38
+agl start:2016-12-12-23:49:44
+agl end:2016-12-12-23:56:15
+cost:2313.56
+image_number:198
+prediction_page:1076
+dims:1024
+/home/app/feas/1076.txt
+this time end:2016-12-12-23:56:15
+/home/app/relation/854.txt
+readDb & this time start:2016-12-12-23:56:15
+readDb end:2016-12-12-23:56:15
+agl start:2016-12-12-23:56:22
+agl end:2016-12-13-00:03:36
+cost:2580.78
+image_number:222
+prediction_page:854
+dims:1024
+/home/app/feas/854.txt
+this time end:2016-12-13-00:03:36
+/home/app/relation/718.txt
+readDb & this time start:2016-12-13-00:03:36
+readDb end:2016-12-13-00:03:36
+agl start:2016-12-13-00:03:43
+agl end:2016-12-13-00:10:29
+cost:2534.12
+image_number:219
+prediction_page:718
+dims:1024
+/home/app/feas/718.txt
+this time end:2016-12-13-00:10:29
+/home/app/relation/638.txt
+readDb & this time start:2016-12-13-00:10:29
+readDb end:2016-12-13-00:10:29
+agl start:2016-12-13-00:10:34
+agl end:2016-12-13-00:16:10
+cost:1991.55
+image_number:171
+prediction_page:638
+dims:1024
+/home/app/feas/638.txt
+this time end:2016-12-13-00:16:10
+/home/app/relation/465.txt
+readDb & this time start:2016-12-13-00:16:10
+readDb end:2016-12-13-00:16:10
+agl start:2016-12-13-00:16:15
+agl end:2016-12-13-00:21:34
+cost:1947.03
+image_number:168
+prediction_page:465
+dims:1024
+/home/app/feas/465.txt
+this time end:2016-12-13-00:21:34
+/home/app/relation/372.txt
+readDb & this time start:2016-12-13-00:21:34
+readDb end:2016-12-13-00:21:34
+agl start:2016-12-13-00:21:36
+agl end:2016-12-13-00:24:01
+cost:841.45
+image_number:72
+prediction_page:372
+dims:1024
+/home/app/feas/372.txt
+this time end:2016-12-13-00:24:01
+/home/app/relation/259.txt
+readDb & this time start:2016-12-13-00:24:01
+readDb end:2016-12-13-00:24:01
+agl start:2016-12-13-00:24:07
+agl end:2016-12-13-00:30:10
+cost:2254.69
+image_number:195
+prediction_page:259
+dims:1024
+/home/app/feas/259.txt
+this time end:2016-12-13-00:30:10
+/home/app/relation/830.txt
+readDb & this time start:2016-12-13-00:30:10
+readDb end:2016-12-13-00:30:10
+agl start:2016-12-13-00:30:17
+agl end:2016-12-13-00:37:26
+cost:2609.14
+image_number:225
+prediction_page:830
+dims:1024
+/home/app/feas/830.txt
+this time end:2016-12-13-00:37:26
+/home/app/relation/428.txt
+readDb & this time start:2016-12-13-00:37:26
+readDb end:2016-12-13-00:37:26
+agl start:2016-12-13-00:37:32
+agl end:2016-12-13-00:43:28
+cost:2181.72
+image_number:188
+prediction_page:428
+dims:1024
+/home/app/feas/428.txt
+this time end:2016-12-13-00:43:28
+/home/app/relation/1022.txt
+readDb & this time start:2016-12-13-00:43:28
+readDb end:2016-12-13-00:43:28
+agl start:2016-12-13-00:43:34
+agl end:2016-12-13-00:49:56
+cost:2273.27
+image_number:195
+prediction_page:1022
+dims:1024
+/home/app/feas/1022.txt
+this time end:2016-12-13-00:49:56
+/home/app/relation/1054.txt
+readDb & this time start:2016-12-13-00:49:56
+readDb end:2016-12-13-00:49:56
+agl start:2016-12-13-00:50:03
+agl end:2016-12-13-00:57:49
+cost:2713.19
+image_number:232
+prediction_page:1054
+dims:1024
+/home/app/feas/1054.txt
+this time end:2016-12-13-00:57:49
+/home/app/relation/871.txt
+readDb & this time start:2016-12-13-00:57:49
+readDb end:2016-12-13-00:57:49
+agl start:2016-12-13-00:57:57
+agl end:2016-12-13-01:06:08
+cost:2943.43
+image_number:251
+prediction_page:871
+dims:1024
+/home/app/feas/871.txt
+this time end:2016-12-13-01:06:08
+/home/app/relation/971.txt
+readDb & this time start:2016-12-13-01:06:08
+readDb end:2016-12-13-01:06:08
+agl start:2016-12-13-01:06:12
+agl end:2016-12-13-01:10:26
+cost:1573.36
+image_number:135
+prediction_page:971
+dims:1024
+/home/app/feas/971.txt
+this time end:2016-12-13-01:10:26
+/home/app/relation/593.txt
+readDb & this time start:2016-12-13-01:10:26
+readDb end:2016-12-13-01:10:26
+agl start:2016-12-13-01:10:32
+agl end:2016-12-13-01:16:36
+cost:2191.32
+image_number:187
+prediction_page:593
+dims:1024
+/home/app/feas/593.txt
+this time end:2016-12-13-01:16:36
+/home/app/relation/1126.txt
+readDb & this time start:2016-12-13-01:16:36
+readDb end:2016-12-13-01:16:36
+agl start:2016-12-13-01:16:41
+agl end:2016-12-13-01:22:06
+cost:1928.74
+image_number:164
+prediction_page:1126
+dims:1024
+/home/app/feas/1126.txt
+this time end:2016-12-13-01:22:06
+/home/app/relation/50.txt
+readDb & this time start:2016-12-13-01:22:06
+readDb end:2016-12-13-01:22:06
+agl start:2016-12-13-01:22:11
+agl end:2016-12-13-01:27:41
+cost:2021.55
+image_number:173
+prediction_page:50
+dims:1024
+/home/app/feas/50.txt
+this time end:2016-12-13-01:27:41
+/home/app/relation/567.txt
+readDb & this time start:2016-12-13-01:27:41
+readDb end:2016-12-13-01:27:41
+agl start:2016-12-13-01:27:45
+agl end:2016-12-13-01:31:56
+cost:1541.51
+image_number:132
+prediction_page:567
+dims:1024
+/home/app/feas/567.txt
+this time end:2016-12-13-01:31:56
+/home/app/relation/494.txt
+readDb & this time start:2016-12-13-01:31:56
+readDb end:2016-12-13-01:31:56
+agl start:2016-12-13-01:32:03
+agl end:2016-12-13-01:38:58
+cost:2584.15
+image_number:222
+prediction_page:494
+dims:1024
+/home/app/feas/494.txt
+this time end:2016-12-13-01:38:58
+/home/app/relation/347.txt
+readDb & this time start:2016-12-13-01:38:58
+readDb end:2016-12-13-01:38:58
+agl start:2016-12-13-01:39:03
+agl end:2016-12-13-01:44:04
+cost:1875.75
+image_number:161
+prediction_page:347
+dims:1024
+/home/app/feas/347.txt
+this time end:2016-12-13-01:44:04
+/home/app/relation/402.txt
+readDb & this time start:2016-12-13-01:44:04
+readDb end:2016-12-13-01:44:04
+agl start:2016-12-13-01:44:12
+agl end:2016-12-13-01:51:42
+cost:2767.7
+image_number:237
+prediction_page:402
+dims:1024
+/home/app/feas/402.txt
+this time end:2016-12-13-01:51:42
+/home/app/relation/684.txt
+readDb & this time start:2016-12-13-01:51:42
+readDb end:2016-12-13-01:51:42
+agl start:2016-12-13-01:51:47
+agl end:2016-12-13-01:56:56
+cost:1888
+image_number:162
+prediction_page:684
+dims:1024
+/home/app/feas/684.txt
+this time end:2016-12-13-01:56:56
+/home/app/relation/733.txt
+readDb & this time start:2016-12-13-01:56:56
+readDb end:2016-12-13-01:56:56
+agl start:2016-12-13-01:57:02
+agl end:2016-12-13-02:03:20
+cost:2262.34
+image_number:193
+prediction_page:733
+dims:1024
+/home/app/feas/733.txt
+this time end:2016-12-13-02:03:20
+/home/app/relation/115.txt
+readDb & this time start:2016-12-13-02:03:20
+readDb end:2016-12-13-02:03:20
+agl start:2016-12-13-02:03:26
+agl end:2016-12-13-02:09:41
+cost:2289.67
+image_number:196
+prediction_page:115
+dims:1024
+/home/app/feas/115.txt
+this time end:2016-12-13-02:09:41
+/home/app/relation/899.txt
+readDb & this time start:2016-12-13-02:09:41
+readDb end:2016-12-13-02:09:41
+agl start:2016-12-13-02:09:48
+agl end:2016-12-13-02:15:59
+cost:2359.32
+image_number:204
+prediction_page:899
+dims:1024
+/home/app/feas/899.txt
+this time end:2016-12-13-02:15:59
+/home/app/relation/202.txt
+readDb & this time start:2016-12-13-02:15:59
+readDb end:2016-12-13-02:15:59
+agl start:2016-12-13-02:16:06
+agl end:2016-12-13-02:22:53
+cost:2470.36
+image_number:212
+prediction_page:202
+dims:1024
+/home/app/feas/202.txt
+this time end:2016-12-13-02:22:53
+/home/app/relation/702.txt
+readDb & this time start:2016-12-13-02:22:53
+readDb end:2016-12-13-02:22:53
+Corrupt JPEG data: premature end of data segment
+agl start:2016-12-13-02:23:02
+agl end:2016-12-13-02:31:13
+cost:3114.16
+image_number:268
+prediction_page:702
+dims:1024
+/home/app/feas/702.txt
+this time end:2016-12-13-02:31:13
+/home/app/relation/302.txt
+readDb & this time start:2016-12-13-02:31:13
+readDb end:2016-12-13-02:31:13
+agl start:2016-12-13-02:31:20
+agl end:2016-12-13-02:37:59
+cost:2547.95
+image_number:220
+prediction_page:302
+dims:1024
+/home/app/feas/302.txt
+this time end:2016-12-13-02:38:00
+/home/app/relation/525.txt
+readDb & this time start:2016-12-13-02:38:00
+readDb end:2016-12-13-02:38:00
+agl start:2016-12-13-02:38:05
+agl end:2016-12-13-02:43:47
+cost:2061.54
+image_number:176
+prediction_page:525
+dims:1024
+/home/app/feas/525.txt
+this time end:2016-12-13-02:43:48
