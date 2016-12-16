@@ -1,0 +1,151 @@
+nohup: ignoring input
+start to create handle.
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1216 15:48:04.972113 20203 model_helper.cpp:163] Decrypt binary file ...
+I1216 15:48:05.657034 20203 model_helper.cpp:168] Split mean file ...
+I1216 15:48:05.657124 20203 model_helper.cpp:182] Split model to prototxt and caffemodel ...
+I1216 15:48:06.204227 20203 net.cpp:301] This network produces output label
+I1216 15:48:06.204321 20203 net.cpp:301] This network produces output output
+I1216 15:48:06.204520 20203 net.cpp:314] Network initialization done.
+Successed to create handle.
+Starting the server...
+Incoming connection
+	SocketInfo: <Host: ::ffff:10.168.153.200 Port: 36619>
+	PeerHost: ::ffff:10.168.153.200
+	PeerAddress: ::ffff:10.168.153.200
+	PeerPort: 36619
+ping()
+cover:958
+now:2016-12-16-15:48:16
+imagePath:/home/app/userimage/image/2016-12-16/2016-12-16-15:48:16a360a4a8-037a-4f62-809e-b7b4e4c9e584.jpg
+******coveridentifystart:2016-12-16-15:48:16
+isCover:1, score: 1
+******coveridentifyend:2016-12-16-15:48:18
+isCover:1 prediction::64 score:0.999269
+#####################:97
+#####################:64
+Incoming connection
+	SocketInfo: <Host: ::ffff:10.168.153.200 Port: 36629>
+	PeerHost: ::ffff:10.168.153.200
+	PeerAddress: ::ffff:10.168.153.200
+	PeerPort: 36629
+ping()
+cover:958
+now:2016-12-16-16:19:10
+imagePath:/home/app/userimage/image/2016-12-16/2016-12-16-16:19:10a5b2b36f-250c-41f2-b67e-e5a5aaf68cfd.jpg
+******coveridentifystart:2016-12-16-16:19:10
+isCover:0, score: 1
+******coveridentifyend:2016-12-16-16:19:12
+isCover:0 prediction::1326 score:0.999996
+#####################:97
+#####################:1326
+Incoming connection
+	SocketInfo: <Host: ::ffff:10.168.153.200 Port: 36630>
+	PeerHost: ::ffff:10.168.153.200
+	PeerAddress: ::ffff:10.168.153.200
+	PeerPort: 36630
+ping()
+cover:1326
+now:2016-12-16-16:19:30
+imagePath:/home/app/userimage/image/2016-12-16/2016-12-16-16:19:306b29eb6b-0777-4dad-bf94-1175c87b547d.jpg
+******coveridentifystart:2016-12-16-16:19:30
+isCover:0, score: 1
+******coveridentifyend:2016-12-16-16:19:33
+isCover:0 prediction::1321 score:1
+#####################:97
+******contentreadstart:2016-12-16-16:19:33
+feaPath:/home/app/feas/1326.txt
+image_number:881
+******contentidentifystart:2016-12-16-16:19:35
+CLASS: 0CLASS: 1318CLASS: 0.334866
+******contentidentifyend:2016-12-16-16:19:38
+Incoming connection
+	SocketInfo: <Host: ::ffff:10.168.153.200 Port: 36735>
+	PeerHost: ::ffff:10.168.153.200
+	PeerAddress: ::ffff:10.168.153.200
+	PeerPort: 36735
+ping()
+cover:1326
+now:2016-12-16-16:39:17
+imagePath:/home/app/userimage/image/2016-12-16/2016-12-16-16:39:1746e32e0a-5a2e-4ca0-a4f6-992ee03b7086.jpg
+******coveridentifystart:2016-12-16-16:39:17
+isCover:0, score: 1
+******coveridentifyend:2016-12-16-16:39:23
+isCover:0 prediction::1323 score:1
+#####################:97
+******contentreadstart:2016-12-16-16:39:23
+feaPath:/home/app/feas/1326.txt
+image_number:881
+******contentidentifystart:2016-12-16-16:39:30
+CLASS: 0CLASS: 1318CLASS: 0.33272
+******contentidentifyend:2016-12-16-16:39:35
+Incoming connection
+	SocketInfo: <Host: ::ffff:10.168.153.200 Port: 36738>
+	PeerHost: ::ffff:10.168.153.200
+	PeerAddress: ::ffff:10.168.153.200
+	PeerPort: 36738
+ping()
+cover:1326
+now:2016-12-16-17:02:52
+imagePath:/home/app/userimage/image/2016-12-16/2016-12-16-17:02:520d984ceb-9be9-4b63-ad3e-9a3070686680.jpg
+******coveridentifystart:2016-12-16-17:02:52
+isCover:0, score: 1
+******coveridentifyend:2016-12-16-17:02:54
+isCover:0 prediction::1323 score:1
+#####################:97
+******contentreadstart:2016-12-16-17:02:54
+feaPath:/home/app/feas/1326.txt
+image_number:881
+******contentidentifystart:2016-12-16-17:02:56
+CLASS: 0CLASS: 1318CLASS: 0.33272
+******contentidentifyend:2016-12-16-17:02:58
+Incoming connection
+	SocketInfo: <Host: ::ffff:10.168.153.200 Port: 36739>
+	PeerHost: ::ffff:10.168.153.200
+	PeerAddress: ::ffff:10.168.153.200
+	PeerPort: 36739
+ping()
+cover:1326
+now:2016-12-16-17:03:10
+imagePath:/home/app/userimage/image/2016-12-16/2016-12-16-17:03:10572ac5b4-c96d-427f-8c4b-bfb7b673240f.jpg
+******coveridentifystart:2016-12-16-17:03:10
+isCover:0, score: 1
+******coveridentifyend:2016-12-16-17:03:11
+isCover:0 prediction::1326 score:1
+#####################:97
+#####################:1326
+Incoming connection
+	SocketInfo: <Host: ::ffff:10.168.153.200 Port: 36741>
+	PeerHost: ::ffff:10.168.153.200
+	PeerAddress: ::ffff:10.168.153.200
+	PeerPort: 36741
+ping()
+cover:1326
+now:2016-12-16-17:21:07
+imagePath:/home/app/userimage/image/2016-12-16/2016-12-16-17:21:07a1ff261d-e9bf-4b8f-a6a3-70b77bc8a24f.jpg
+******coveridentifystart:2016-12-16-17:21:07
+isCover:0, score: 1
+******coveridentifyend:2016-12-16-17:21:09
+isCover:0 prediction::1326 score:1
+#####################:97
+#####################:1326
+Incoming connection
+	SocketInfo: <Host: ::ffff:10.168.153.200 Port: 36742>
+	PeerHost: ::ffff:10.168.153.200
+	PeerAddress: ::ffff:10.168.153.200
+	PeerPort: 36742
+ping()
+cover:1326
+now:2016-12-16-17:21:53
+imagePath:/home/app/userimage/image/2016-12-16/2016-12-16-17:21:53f3df4624-2f94-4695-8ff9-7d5fece2814d.jpg
+******coveridentifystart:2016-12-16-17:21:53
+isCover:0, score: 1
+******coveridentifyend:2016-12-16-17:21:54
+isCover:0 prediction::1319 score:1
+#####################:97
+******contentreadstart:2016-12-16-17:21:54
+feaPath:/home/app/feas/1326.txt
+image_number:881
+******contentidentifystart:2016-12-16-17:21:56
+CLASS: 0CLASS: 1315CLASS: 0.37435
+******contentidentifyend:2016-12-16-17:21:58

@@ -65,7 +65,8 @@ using namespace tutorial;
 using namespace shared;
 
 sn_handle_t classifier_handle = nullptr;
-const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v2.model";
+//const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v2.model";
+const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v4.model";
 const char *license_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/resource/license.dat";
 int device_id = 0;
 int batch_size = 1;
@@ -135,7 +136,7 @@ public:
 
     //记录日志
     string resultPath = "/home/app/userimage/result/" + boost::lexical_cast<string>(day) + ".txt";
-    string result = boost::lexical_cast<string>(now) + " "  + boost::lexical_cast<string>(aUuid) + ".jpg ";
+    string result = boost::lexical_cast<string>(now) + boost::lexical_cast<string>(aUuid) + ".jpg ";
     
     //start 处理识别=============================================================
     cv::Mat img_src = cv::imread(imagePath);
@@ -186,6 +187,8 @@ public:
     if (it != labels_vec.end()) {
         isCover = 1;
 	cout << "#####################:" << *it  << endl;
+    }else{
+	isCover = -100;
     }
 
 
@@ -198,14 +201,15 @@ public:
 	        f1.close();
 	}
     	if(classes.confidence_page > 0.9){
-        	_return = "CLASS: 1CLASS: " + boost::lexical_cast<string>(classes.prediction_page) + "CLASS: " + boost::lexical_cast<string>(classes.confidence_page);
+        	_return = "{\"iscover\":1, \"prediction\":" + boost::lexical_cast<string>(classes.prediction_page) + ",\"confidence\":" + boost::lexical_cast<string>(classes.confidence_page) + "}";
+		//_return = "CLASS: 1CLASS: " + boost::lexical_cast<string>(classes.prediction_page) + "CLASS: " + boost::lexical_cast<string>(classes.confidence_page);
         	return;
 	}
-        result = boost::lexical_cast<string>(now) + " "  + boost::lexical_cast<string>(aUuid) + ".jpg ";
+        result = boost::lexical_cast<string>(now) + boost::lexical_cast<string>(aUuid) + ".jpg ";
     }
 
     if(cover < -1){
-        _return = "CLASS: -1CLASS: -1CLASS: -1";
+        _return = "{\"iscover\":-1,\"prediction\": -1,\"confidence\":-1}";
 	//记录返回结果日志=================================================== 
 	result += " 不是首页，也没有输入首页的cover值";
 	ofstream f1(resultPath.c_str(), ios::app);
@@ -233,7 +237,7 @@ public:
     fstream _file;
     _file.open(feaPath, ios::in);
     if(!_file){
-        _return = "CLASS: -2CLASS: -1CLASS: -1";
+        _return = "{\"iscover\":-2,\"prediction\": -1,\"confidence\":-1}",
 	//记录返回结果日志=================================================== 
 	result += " 没有对应绘本的特征文件" + feaPath;
 	ofstream f1(resultPath.c_str(), ios::app);
@@ -297,10 +301,10 @@ public:
             f1 << result << endl;
             f1.close();
     }
-    if(classes.confidence_page > 0.45){
-    	_return = "CLASS: 0CLASS: " + boost::lexical_cast<string>(classes.prediction_page) + "CLASS: " + boost::lexical_cast<string>(classes.confidence_page);
+    if(classes.confidence_page > 0.50){
+    	_return = "{\"iscover\": 0,\"prediction\":" + boost::lexical_cast<string>(classes.prediction_page) + ",\"confidence\":" + boost::lexical_cast<string>(classes.confidence_page) + "}";
     }else{
-        _return = "CLASS: -3CLASS: -1CLASS: -1";
+        _return = "{\"iscover\":-3,\"prediction\": -1,\"confidence\":-1}";
     }
 
     delete classes.data_feature;
