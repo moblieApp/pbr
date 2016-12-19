@@ -49,6 +49,7 @@
 #include <fstream>
 #include <time.h>
 #include <chrono>
+#include <queue> 
 
 #include "../gen-cpp/Calculator.h"
 #include "./utils/base64.h"
@@ -64,7 +65,8 @@ using namespace apache::thrift::server;
 using namespace tutorial;
 using namespace shared;
 
-sn_handle_t classifier_handle = nullptr;
+queue<sn_handle_t> handle_queue;
+//sn_handle_t classifier_handle = nullptr;
 //const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v2.model";
 const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v4.model";
 const char *license_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/resource/license.dat";
@@ -112,6 +114,15 @@ public:
   }
   
   void addpicture(std::string& _return, const std::string& imagefile, const int32_t cover) {
+    sn_handle_t classifier_handle = nullptr; 
+    cout << "queue.lenth:" << handle_queue.size() << endl;
+    if(!handle_queue.empty()){
+    	classifier_handle = handle_queue.front();
+	handle_queue.pop();
+    }else{
+        cout << "no handle in queue!" << endl;
+        _return = "ERROR:no handle in queue!";
+    }
     cout << "cover:" << cover << endl;
     string decoded = base64_decode(imagefile);
     
@@ -143,8 +154,12 @@ public:
     if (!img_src.data) {
         std::cerr << "Failed to load image" << std::endl;
         _return = "ERROR:Failed to load image!";
+        
+        handle_queue.push(classifier_handle);
+        cout << "queue.lenth0:" << handle_queue.size() << endl;
 	return;
     }
+    img_src = img_src.t();
 
     sn_image_t image = {img_src.data, img_src.rows, img_src.cols,
             img_src.step, SN_PIX_FMT_BGR888};
@@ -161,8 +176,11 @@ public:
     for (int i = 0; i < 1; i++) {
         if (sn_drawbook_classify(classifier_handle, &image, &classes) != SN_OK) {
                 std::cerr << "Failed to recognition the image." << std::endl;
-        _return = "ERROR:Failed to recognition the image!";
-	return;
+        	_return = "ERROR:Failed to recognition the image!";
+        
+		handle_queue.push(classifier_handle);
+        	cout << "queue.lenth1:" << handle_queue.size() << endl;
+		return;
         }
     }
     std::cout << "isCover:" << classes.prediction_cover << ", score: " << classes.confidence_cover << std::endl;
@@ -175,7 +193,9 @@ public:
     cout << "******coveridentifyend:" << coveridentifyend << endl;
  
     int isCover = classes.prediction_cover;
-    std::cout << "isCover:" << isCover <<" prediction::" << classes.prediction_page <<" score:"<< classes.confidence_page << std::endl;
+    int prediction = classes.prediction_page;
+    int confidence = classes.confidence_page;
+    std::cout << "****************isCover:" << isCover <<" prediction::" << classes.prediction_page <<" score:"<< classes.confidence_page << std::endl;
 
     string cover_path = "/home/app/cover/cover.txt";
     std::vector<std::string> files_vec;
@@ -187,7 +207,7 @@ public:
     if (it != labels_vec.end()) {
         isCover = 1;
 	cout << "#####################:" << *it  << endl;
-    }else{
+    } else {
 	isCover = -100;
     }
 
@@ -203,11 +223,14 @@ public:
     	if(classes.confidence_page > 0.9){
         	_return = "{\"iscover\":1, \"prediction\":" + boost::lexical_cast<string>(classes.prediction_page) + ",\"confidence\":" + boost::lexical_cast<string>(classes.confidence_page) + "}";
 		//_return = "CLASS: 1CLASS: " + boost::lexical_cast<string>(classes.prediction_page) + "CLASS: " + boost::lexical_cast<string>(classes.confidence_page);
+        	
+        	handle_queue.push(classifier_handle);
+        	cout << "queue.lenth2:" << handle_queue.size() << endl;
         	return;
-	}
-        result = boost::lexical_cast<string>(now) + boost::lexical_cast<string>(aUuid) + ".jpg ";
+    	}
     }
-
+    result = boost::lexical_cast<string>(now) + boost::lexical_cast<string>(aUuid) + ".jpg ";
+    
     if(cover < -1){
         _return = "{\"iscover\":-1,\"prediction\": -1,\"confidence\":-1}";
 	//记录返回结果日志=================================================== 
@@ -217,6 +240,8 @@ public:
 	        f1 << result << endl;
 	        f1.close();
 	}
+        handle_queue.push(classifier_handle);
+        cout << "queue.lenth3:" << handle_queue.size() << endl;
         return;
     }
 
@@ -245,6 +270,9 @@ public:
 	        f1 << result << endl;
 	        f1.close();
 	}
+        
+        handle_queue.push(classifier_handle);
+        cout << "queue.lenth4:" << handle_queue.size() << endl;
         return;
     }
 
@@ -284,6 +312,9 @@ public:
         std::cerr << "Failed to retrieve image..." << std::endl;
         delete classes.data_feature;
         _return = "ERROR:Failed to retrieve image...";
+        
+        handle_queue.push(classifier_handle);
+        cout << "queue.lenth5:" << handle_queue.size() << endl;
 	return;
     }
     std::cout << "CLASS: 0"  << "CLASS: " << classes.prediction_page << "CLASS: " << classes.confidence_page << std::endl;
@@ -315,6 +346,8 @@ public:
 
     delete[] type_array;
 
+    handle_queue.push(classifier_handle);
+    cout << "queue.lenth6:" << handle_queue.size() << endl;
     //sn_drawbook_destroy_classifier(classifier_handle);
 
     return;
@@ -474,14 +507,17 @@ int main() {
     threadManager);
   */
   
-
-  std::cout << "start to create handle." << std::endl;
-  if (sn_drawbook_create_classifier(
-              &classifier_handle,
-              model_path, license_path, device_id, batch_size) != SN_OK) {
-      std::cerr << "Failed to create handle" << std::endl;
+  for(int i = 0; i < 3; i++) {
+	  sn_handle_t classifier_handle = nullptr; 
+	  std::cout << "start to create handle " << i << std::endl;
+	  if (sn_drawbook_create_classifier(
+		      &classifier_handle,
+		      model_path, license_path, device_id, batch_size) != SN_OK) {
+	      std::cerr << "Failed to create handle" << i << std::endl;
+	  }
+	  std::cout << "Successed to create handle." << i << std::endl;
+	  handle_queue.push(classifier_handle);
   }
-  std::cout << "Successed to create handle." << std::endl;
   
   cout << "Starting the server..." << endl;
   server.serve();

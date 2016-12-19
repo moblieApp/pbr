@@ -94,8 +94,8 @@ clean: CMakeFiles/TutorialClient.dir/clean
 # Target rules for target CMakeFiles/TutorialServer.dir
 
 # All Build rule for target.
-CMakeFiles/TutorialServer.dir/all: CMakeFiles/utilscpp.dir/all
 CMakeFiles/TutorialServer.dir/all: CMakeFiles/tutorialgencpp.dir/all
+CMakeFiles/TutorialServer.dir/all: CMakeFiles/utilscpp.dir/all
 	$(MAKE) -f CMakeFiles/TutorialServer.dir/build.make CMakeFiles/TutorialServer.dir/depend
 	$(MAKE) -f CMakeFiles/TutorialServer.dir/build.make CMakeFiles/TutorialServer.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/project/test/cpp/CMakeFiles  2
