@@ -41,9 +41,10 @@ include_directories("${PROJECT_SOURCE_DIR}/lib")
 
 #include(ThriftMacros)
 message(${CMAKE_CURRENT_BINARY_DIR})
+message(${PROJECT_SOURCE_DIR})
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}/alg/include")
-link_directories("${CMAKE_CURRENT_BINARY_DIR}/alg/lib")
+link_directories("${PROJECT_SOURCE_DIR}/alg/lib")
 
 set(utilscpp_SOURCES
     utils/base64.cpp

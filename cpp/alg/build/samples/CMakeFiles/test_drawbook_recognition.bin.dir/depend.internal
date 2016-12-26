@@ -682,4 +682,4 @@ samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.o
  /disk1/deeplearning/local_install/include/opencv2/highgui/highgui_c.h
  /disk1/deeplearning/local_install/include/opencv2/imgproc/imgproc.hpp
  /disk1/deeplearning/local_install/include/opencv2/imgproc/types_c.h
- /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/samples/drawbook_recognition.cpp
+ /home/app/project/test/cpp/alg/samples/drawbook_recognition.cpp

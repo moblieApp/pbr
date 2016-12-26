@@ -67,8 +67,8 @@ using namespace shared;
 
 queue<sn_handle_t> handle_queue;
 //sn_handle_t classifier_handle = nullptr;
-//const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v2.model";
-const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v4.model";
+const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v6.model";
+//const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v4.model";
 const char *license_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/resource/license.dat";
 int device_id = 0;
 int batch_size = 1;
@@ -114,15 +114,24 @@ public:
   }
   
   void addpicture(std::string& _return, const std::string& imagefile, const int32_t cover) {
-    sn_handle_t classifier_handle = nullptr; 
-    cout << "queue.lenth:" << handle_queue.size() << endl;
-    if(!handle_queue.empty()){
-    	classifier_handle = handle_queue.front();
-	handle_queue.pop();
-    }else{
-        cout << "no handle in queue!" << endl;
-        _return = "ERROR:no handle in queue!";
+    sn_handle_t classifier_handle = nullptr;
+    std::cout << "start to create handle " << " device_id:" << device_id << std::endl;
+    //if(classifier_handle == nullptr){
+    if (sn_drawbook_create_classifier(
+                &classifier_handle,
+                model_path, license_path, device_id, batch_size) != SN_OK) {
+        std::cerr << "Failed to create handle" << std::endl;
     }
+    //}
+    //sn_handle_t classifier_handle = nullptr; 
+    //cout << "queue.lenth:" << handle_queue.size() << " device_id:" << device_id << endl;
+    //if(!handle_queue.empty()){
+    //	classifier_handle = handle_queue.front();
+    //    handle_queue.pop();
+    //}else{
+    //    cout << "no handle in queue!" << endl;
+    //    _return = "ERROR:no handle in queue!";
+    //}
     cout << "cover:" << cover << endl;
     string decoded = base64_decode(imagefile);
     
@@ -155,8 +164,9 @@ public:
         std::cerr << "Failed to load image" << std::endl;
         _return = "ERROR:Failed to load image!";
         
-        handle_queue.push(classifier_handle);
-        cout << "queue.lenth0:" << handle_queue.size() << endl;
+        //handle_queue.push(classifier_handle);
+        //cout << "queue.lenth0:" << handle_queue.size() << endl;
+    	sn_drawbook_destroy_classifier(classifier_handle);
 	return;
     }
     img_src = img_src.t();
@@ -172,20 +182,23 @@ public:
     local = localtime(&t);  
     strftime(coveridentifystart, 64, "%Y-%m-%d-%H:%M:%S", local);  
     cout << "******coveridentifystart:" << coveridentifystart << endl;
+   
+    clock_t t1 = clock(); 
+    //for (int i = 0; i < 1; i++) {
+    if (sn_drawbook_classify(classifier_handle, &image, &classes) != SN_OK) {
+            std::cerr << "Failed to recognition the image." << std::endl;
+    	_return = "ERROR:Failed to recognition the image!";
     
-    for (int i = 0; i < 1; i++) {
-        if (sn_drawbook_classify(classifier_handle, &image, &classes) != SN_OK) {
-                std::cerr << "Failed to recognition the image." << std::endl;
-        	_return = "ERROR:Failed to recognition the image!";
-        
-		handle_queue.push(classifier_handle);
-        	cout << "queue.lenth1:" << handle_queue.size() << endl;
-		return;
-        }
+    	//handle_queue.push(classifier_handle);
+    	//cout << "queue.lenth1:" << handle_queue.size() << endl;
+    	sn_drawbook_destroy_classifier(classifier_handle);
+    	return;
     }
+    //}
     std::cout << "isCover:" << classes.prediction_cover << ", score: " << classes.confidence_cover << std::endl;
     delete classes.data_feature;
     
+    std::cout << "cover-cost " << 1.0 * (clock() - t1) / CLOCKS_PER_SEC << " sec" << std::endl;
     char coveridentifyend[128]= {0};
     t = time(NULL);  
     local = localtime(&t);  
@@ -224,10 +237,25 @@ public:
         	_return = "{\"iscover\":1, \"prediction\":" + boost::lexical_cast<string>(classes.prediction_page) + ",\"confidence\":" + boost::lexical_cast<string>(classes.confidence_page) + "}";
 		//_return = "CLASS: 1CLASS: " + boost::lexical_cast<string>(classes.prediction_page) + "CLASS: " + boost::lexical_cast<string>(classes.confidence_page);
         	
-        	handle_queue.push(classifier_handle);
-        	cout << "queue.lenth2:" << handle_queue.size() << endl;
+        	//handle_queue.push(classifier_handle);
+        	//cout << "queue.lenth2:" << handle_queue.size() << endl;
+    		sn_drawbook_destroy_classifier(classifier_handle);
         	return;
     	}
+    } else {
+	//记录返回结果日志=================================================== 
+	result += " is_cover:0  predict_id:" +  boost::lexical_cast<string>(classes.prediction_page) + " score: " +  boost::lexical_cast<string>(classes.confidence_page);
+	ofstream f1(resultPath.c_str(), ios::app);
+	if(f1){
+	        f1 << result << std::endl;
+	        f1.close();
+	}
+    	//if(classes.confidence_page > 0.99){
+        //	_return = "{\"iscover\":0, \"prediction\":" + boost::lexical_cast<string>(classes.prediction_page) + ",\"confidence\":" + boost::lexical_cast<string>(classes.confidence_page) + "}";
+    	//	sn_drawbook_destroy_classifier(classifier_handle);
+        //	return;
+    	//}
+
     }
     result = boost::lexical_cast<string>(now) + boost::lexical_cast<string>(aUuid) + ".jpg ";
     
@@ -240,8 +268,9 @@ public:
 	        f1 << result << endl;
 	        f1.close();
 	}
-        handle_queue.push(classifier_handle);
-        cout << "queue.lenth3:" << handle_queue.size() << endl;
+        //handle_queue.push(classifier_handle);
+        //cout << "queue.lenth3:" << handle_queue.size() << endl;
+    	sn_drawbook_destroy_classifier(classifier_handle);
         return;
     }
 
@@ -271,8 +300,9 @@ public:
 	        f1.close();
 	}
         
-        handle_queue.push(classifier_handle);
-        cout << "queue.lenth4:" << handle_queue.size() << endl;
+        //handle_queue.push(classifier_handle);
+        //cout << "queue.lenth4:" << handle_queue.size() << endl;
+    	sn_drawbook_destroy_classifier(classifier_handle);
         return;
     }
 
@@ -308,16 +338,19 @@ public:
     image.pixel_format = SN_PIX_FMT_BGR888;
     classes.data_feature = new float[dims];
 
+    clock_t t2 = clock(); 
     if(sn_drawbook_retrieve(classifier_handle, &image, files_gallery.size(), type_array, &classes) != SN_OK) {
         std::cerr << "Failed to retrieve image..." << std::endl;
         delete classes.data_feature;
         _return = "ERROR:Failed to retrieve image...";
         
-        handle_queue.push(classifier_handle);
-        cout << "queue.lenth5:" << handle_queue.size() << endl;
+        //handle_queue.push(classifier_handle);
+        //cout << "queue.lenth5:" << handle_queue.size() << endl;
+    	sn_drawbook_destroy_classifier(classifier_handle);
 	return;
     }
     std::cout << "CLASS: 0"  << "CLASS: " << classes.prediction_page << "CLASS: " << classes.confidence_page << std::endl;
+    std::cout << "content-cost " << 1.0 * (clock() - t2) / CLOCKS_PER_SEC << " sec" << std::endl;
     
     char contentidentifyend[128]= {0};
     t = time(NULL);  
@@ -333,8 +366,12 @@ public:
             f1.close();
     }
     if(classes.confidence_page > 0.50){
-    	_return = "{\"iscover\": 0,\"prediction\":" + boost::lexical_cast<string>(classes.prediction_page) + ",\"confidence\":" + boost::lexical_cast<string>(classes.confidence_page) + "}";
-    }else{
+    	if(cover == classes.prediction_page){
+    		_return = "{\"iscover\": 1,\"prediction\":" + boost::lexical_cast<string>(classes.prediction_page) + ",\"confidence\":" + boost::lexical_cast<string>(classes.confidence_page) + "}";
+    	}else{
+    		_return = "{\"iscover\": 0,\"prediction\":" + boost::lexical_cast<string>(classes.prediction_page) + ",\"confidence\":" + boost::lexical_cast<string>(classes.confidence_page) + "}";
+    	}
+     }else{
         _return = "{\"iscover\":-3,\"prediction\": -1,\"confidence\":-1}";
     }
 
@@ -346,9 +383,9 @@ public:
 
     delete[] type_array;
 
-    handle_queue.push(classifier_handle);
-    cout << "queue.lenth6:" << handle_queue.size() << endl;
-    //sn_drawbook_destroy_classifier(classifier_handle);
+    //handle_queue.push(classifier_handle);
+    //cout << "queue.lenth6:" << handle_queue.size() << endl;
+    sn_drawbook_destroy_classifier(classifier_handle);
 
     return;
  
@@ -507,17 +544,17 @@ int main() {
     threadManager);
   */
   
-  for(int i = 0; i < 3; i++) {
-	  sn_handle_t classifier_handle = nullptr; 
-	  std::cout << "start to create handle " << i << std::endl;
-	  if (sn_drawbook_create_classifier(
-		      &classifier_handle,
-		      model_path, license_path, device_id, batch_size) != SN_OK) {
-	      std::cerr << "Failed to create handle" << i << std::endl;
-	  }
-	  std::cout << "Successed to create handle." << i << std::endl;
-	  handle_queue.push(classifier_handle);
-  }
+  //for(int i = 0; i < 3; i++) {
+  //        sn_handle_t classifier_handle = nullptr; 
+  //        std::cout << "start to create handle " << i << " device_id:" << device_id << std::endl;
+  //        if (sn_drawbook_create_classifier(
+  //      	      &classifier_handle,
+  //      	      model_path, license_path, device_id, batch_size) != SN_OK) {
+  //            std::cerr << "Failed to create handle" << i << std::endl;
+  //        }
+  //        std::cout << "Successed to create handle." << i << std::endl;
+  //        handle_queue.push(classifier_handle);
+  //}
   
   cout << "Starting the server..." << endl;
   server.serve();

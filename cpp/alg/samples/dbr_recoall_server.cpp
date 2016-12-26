@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
     }
 
     sn_handle_t classifier_handle = nullptr;   
-    const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v2.model";
+    const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v4.model";
     const char *license_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/resource/license.dat";
     int device_id = 0; 
     int batch_size = 1;
@@ -112,16 +112,20 @@ int main(int argc, char *argv[]) {
     sn_drawbook_type classes;
     classes.data_feature = new float[dims];
 
+    clock_t t = clock();
     for (int i = 0; i < 1; i++) {
         if (sn_drawbook_classify(classifier_handle, &image, &classes) != SN_OK) {
         	std::cerr << "Failed to recognition the image." << std::endl;
         return -1;
         }
     }
-    std::cout << "isCover:" << classes.prediction_cover << ", score: " << classes.confidence_cover << std::endl;
+    std::cout << "step1-cost " << 1.0 * (clock() - t) / CLOCKS_PER_SEC << " sec" << std::endl;    
+    std::cout << "isCover:" << classes.prediction_cover  << ", score: " << classes.confidence_cover << std::endl;
     delete classes.data_feature;
 
     int isCover = classes.prediction_cover;
+    
+    std::cout << "prediction_page: " << classes.prediction_page << " confidence_page: " << classes.confidence_page << std::endl;
 
     std::cout << "isCover:" << isCover <<":" << (isCover == 1) <<":"<< (isCover == '1') << std::endl;
     if(isCover == 1){
@@ -169,8 +173,8 @@ int main(int argc, char *argv[]) {
 	vector<string> tokens;
         boost::split(tokens, files_gallery[i], boost::is_any_of(";"));
         for (size_t j = 0; j < tokens.size(); ++j){
-              //cout << tokens[j] << endl;
 	      type_array[i].data_feature[j] = stringToNum<float>(tokens[j]);
+              //cout << tokens[j] << endl;
         }
 	
         type_array[i].prediction_page = labels_gallery[i];

@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/samples/drawbook_recognition.cpp" "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.o"
+  "/home/app/project/test/cpp/alg/samples/drawbook_recognition.cpp" "/home/app/project/test/cpp/alg/build/samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

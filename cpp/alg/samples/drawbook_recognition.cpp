@@ -10,6 +10,9 @@
 #include <boost/lexical_cast.hpp>
 
 #include "drawbook.h"
+#include <time.h>
+
+using namespace std;
 
 int ReadDbinfo(const std::string& files_txt, std::vector<std::string>& files,
   std::vector<int>& labels) {
@@ -35,12 +38,13 @@ int ReadDbinfo(const std::string& files_txt, std::vector<std::string>& files,
 int main(int argc, char *argv[]) {
 
     sn_handle_t classifier_handle = nullptr;   
-    const char *model_path = "../models/sn_drawbook_classification_v2.model";
+    //const char *model_path = "../models/sn_drawbook_classification_v4.model";
+    const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v4.model";
     const char *license_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/resource/license.dat";
-    int device_id = -1; 
+    int device_id = 0; 
     int batch_size = 1;
     int dims;
-
+    
     if (sn_drawbook_create_classifier(
                 &classifier_handle,
                 model_path, license_path, device_id, batch_size) != SN_OK) {
@@ -60,17 +64,32 @@ int main(int argc, char *argv[]) {
 
     sn_drawbook_get_feature_dims(classifier_handle, &dims);
 
+    time_t t1;  //秒时间
+    tm* local; //本地时间
+    char now[128]= {0};
+
+    t1 = time(NULL);
+    local = localtime(&t1);
+    strftime(now, 64, "%Y-%m-%d-%H:%M:%S", local);
+    cout << "start cover:" << now << endl;
+
     sn_drawbook_type classes;
     classes.data_feature = new float[dims];
-
+    clock_t t = clock();
     for (int i = 0; i < 1; i++) {
         if (sn_drawbook_classify(classifier_handle, &image, &classes) != SN_OK) {
         std::cerr << "Failed to recognition the image." << std::endl;
         return -1;
         }
     }
+    std::cout << "step1-cost " << 1.0 * (clock() - t) / CLOCKS_PER_SEC << " sec" << std::endl;
     std::cout << "CLASS: " << classes.prediction_page << ", score: " << classes.confidence_page << std::endl;
     delete classes.data_feature;
+
+    t1 = time(NULL);
+    local = localtime(&t1);
+    strftime(now, 64, "%Y-%m-%d-%H:%M:%S", local);
+    cout << "end cover:" << now << endl;
 
     //*********************** Test Batch classifiy************************
     
@@ -90,12 +109,13 @@ int main(int argc, char *argv[]) {
         p_image_array[i]->pixel_format = SN_PIX_FMT_BGR888;
         type_array[i].data_feature = new float[dims];
     }
-
+    t = clock();
     if (sn_drawbook_batch_classify(classifier_handle, 
                 p_image_array, image_number, type_array) != SN_OK) {
         std::cerr << "Failed to classify drawbook." << std::endl;
         return -1;
     }
+    std::cout << "step2-cost " << 1.0 * (clock() - t) / CLOCKS_PER_SEC << " sec" << std::endl;
     std::cout << "CLASS of second drawbook: " << type_array[1].prediction_page << ", score: " << type_array[1].confidence_page << std::endl;
     
     for (int i = 0; i < image_number; i++) {
@@ -121,7 +141,8 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < image_number; i++) {
         imgs_gallery.push_back(cv::Mat());
-        img_src = cv::imread("/home/app/images/littlebluetruck/photo/"+ files_gallery[i]);
+        //img_src = cv::imread("/home/app/images/littlebluetruck/photo/"+ files_gallery[i]);
+        img_src = cv::imread("/home/app/images/en20161209/littlebluetruck/photo/"+ files_gallery[i]);
         img_src.copyTo(imgs_gallery[i]);
 
         p_image_array[i] = new sn_image_t;
@@ -132,7 +153,7 @@ int main(int argc, char *argv[]) {
         p_image_array[i]->pixel_format = SN_PIX_FMT_BGR888;
         type_array[i].data_feature = new float[dims];
     }
-    
+    t = clock();
     // 先提取检索所有图像的特征
     if (sn_drawbook_batch_classify(classifier_handle, 
                 p_image_array, image_number, type_array) != SN_OK) {
@@ -140,6 +161,7 @@ int main(int argc, char *argv[]) {
         return -1;
     }
     
+    std::cout << "step3-cost " << 1.0 * (clock() - t) / CLOCKS_PER_SEC << " sec" << std::endl;
     // 因为这本书里面都不在书库上，所以prediction_page, confidence_page是没用
     // 但是我们事前已经知道这本书所有页的ID，将其写入到以prediction_page, confidence_page即可
     for (int i = 0;i < image_number; i++) {
@@ -164,6 +186,7 @@ int main(int argc, char *argv[]) {
             delete classes.data_feature;
             break;
         } 
+        std::cout << "prediction_page: " << classes.prediction_page << " confidence: " << classes.confidence_page << std::endl;
         //common::Timer::Stop("Retrieving query image features");
         if (labels_test[i] == classes.prediction_page) {
             count++;

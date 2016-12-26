@@ -130,9 +130,9 @@ int main(int argc, char *argv[]) {
     char now[128]= {0};
     
     sn_handle_t classifier_handle = nullptr;   
-    const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v2.model";
+    const char *model_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/models/sn_drawbook_classification_v4.model";
     const char *license_path = "/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/resource/license.dat";
-    int device_id = -1; 
+    int device_id = 0; 
     int batch_size = 1;
     int dims;
     

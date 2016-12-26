@@ -50,15 +50,16 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/app/sn_drawbook_sdk_v0.0.2_linux_x64
+CMAKE_SOURCE_DIR = /home/app/project/test/cpp/alg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build
+CMAKE_BINARY_DIR = /home/app/project/test/cpp/alg/build
 
 #=============================================================================
 # Directory level rules for directory samples
 
 # Convenience name for "all" pass in the directory.
+samples/all: samples/CMakeFiles/test_dbr_create_hander.bin.dir/all
 samples/all: samples/CMakeFiles/test_dbr_feas_service.bin.dir/all
 samples/all: samples/CMakeFiles/test_dbr_recoall_server.bin.dir/all
 samples/all: samples/CMakeFiles/test_dbr_recogition_server.bin.dir/all
@@ -66,6 +67,7 @@ samples/all: samples/CMakeFiles/test_drawbook_recognition.bin.dir/all
 .PHONY : samples/all
 
 # Convenience name for "clean" pass in the directory.
+samples/clean: samples/CMakeFiles/test_dbr_create_hander.bin.dir/clean
 samples/clean: samples/CMakeFiles/test_dbr_feas_service.bin.dir/clean
 samples/clean: samples/CMakeFiles/test_dbr_recoall_server.bin.dir/clean
 samples/clean: samples/CMakeFiles/test_dbr_recogition_server.bin.dir/clean
@@ -77,13 +79,48 @@ samples/preinstall:
 .PHONY : samples/preinstall
 
 #=============================================================================
+# Target rules for target samples/CMakeFiles/test_dbr_create_hander.bin.dir
+
+# All Build rule for target.
+samples/CMakeFiles/test_dbr_create_hander.bin.dir/all:
+	$(MAKE) -f samples/CMakeFiles/test_dbr_create_hander.bin.dir/build.make samples/CMakeFiles/test_dbr_create_hander.bin.dir/depend
+	$(MAKE) -f samples/CMakeFiles/test_dbr_create_hander.bin.dir/build.make samples/CMakeFiles/test_dbr_create_hander.bin.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/project/test/cpp/alg/build/CMakeFiles  1
+	@echo "Built target test_dbr_create_hander.bin"
+.PHONY : samples/CMakeFiles/test_dbr_create_hander.bin.dir/all
+
+# Include target in all.
+all: samples/CMakeFiles/test_dbr_create_hander.bin.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+samples/CMakeFiles/test_dbr_create_hander.bin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_create_hander.bin.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 0
+.PHONY : samples/CMakeFiles/test_dbr_create_hander.bin.dir/rule
+
+# Convenience name for target.
+test_dbr_create_hander.bin: samples/CMakeFiles/test_dbr_create_hander.bin.dir/rule
+.PHONY : test_dbr_create_hander.bin
+
+# clean rule for target.
+samples/CMakeFiles/test_dbr_create_hander.bin.dir/clean:
+	$(MAKE) -f samples/CMakeFiles/test_dbr_create_hander.bin.dir/build.make samples/CMakeFiles/test_dbr_create_hander.bin.dir/clean
+.PHONY : samples/CMakeFiles/test_dbr_create_hander.bin.dir/clean
+
+# clean rule for target.
+clean: samples/CMakeFiles/test_dbr_create_hander.bin.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target samples/CMakeFiles/test_dbr_feas_service.bin.dir
 
 # All Build rule for target.
 samples/CMakeFiles/test_dbr_feas_service.bin.dir/all:
 	$(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/depend
 	$(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/project/test/cpp/alg/build/CMakeFiles  2
 	@echo "Built target test_dbr_feas_service.bin"
 .PHONY : samples/CMakeFiles/test_dbr_feas_service.bin.dir/all
 
@@ -93,9 +130,9 @@ all: samples/CMakeFiles/test_dbr_feas_service.bin.dir/all
 
 # Build rule for subdir invocation for target.
 samples/CMakeFiles/test_dbr_feas_service.bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_feas_service.bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 0
 .PHONY : samples/CMakeFiles/test_dbr_feas_service.bin.dir/rule
 
 # Convenience name for target.
@@ -118,7 +155,7 @@ clean: samples/CMakeFiles/test_dbr_feas_service.bin.dir/clean
 samples/CMakeFiles/test_dbr_recoall_server.bin.dir/all:
 	$(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/depend
 	$(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/project/test/cpp/alg/build/CMakeFiles  3
 	@echo "Built target test_dbr_recoall_server.bin"
 .PHONY : samples/CMakeFiles/test_dbr_recoall_server.bin.dir/all
 
@@ -128,9 +165,9 @@ all: samples/CMakeFiles/test_dbr_recoall_server.bin.dir/all
 
 # Build rule for subdir invocation for target.
 samples/CMakeFiles/test_dbr_recoall_server.bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_recoall_server.bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 0
 .PHONY : samples/CMakeFiles/test_dbr_recoall_server.bin.dir/rule
 
 # Convenience name for target.
@@ -153,7 +190,7 @@ clean: samples/CMakeFiles/test_dbr_recoall_server.bin.dir/clean
 samples/CMakeFiles/test_dbr_recogition_server.bin.dir/all:
 	$(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/depend
 	$(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/project/test/cpp/alg/build/CMakeFiles  4
 	@echo "Built target test_dbr_recogition_server.bin"
 .PHONY : samples/CMakeFiles/test_dbr_recogition_server.bin.dir/all
 
@@ -163,9 +200,9 @@ all: samples/CMakeFiles/test_dbr_recogition_server.bin.dir/all
 
 # Build rule for subdir invocation for target.
 samples/CMakeFiles/test_dbr_recogition_server.bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_recogition_server.bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 0
 .PHONY : samples/CMakeFiles/test_dbr_recogition_server.bin.dir/rule
 
 # Convenience name for target.
@@ -188,7 +225,7 @@ clean: samples/CMakeFiles/test_dbr_recogition_server.bin.dir/clean
 samples/CMakeFiles/test_drawbook_recognition.bin.dir/all:
 	$(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/depend
 	$(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/app/project/test/cpp/alg/build/CMakeFiles  5
 	@echo "Built target test_drawbook_recognition.bin"
 .PHONY : samples/CMakeFiles/test_drawbook_recognition.bin.dir/all
 
@@ -198,9 +235,9 @@ all: samples/CMakeFiles/test_drawbook_recognition.bin.dir/all
 
 # Build rule for subdir invocation for target.
 samples/CMakeFiles/test_drawbook_recognition.bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_drawbook_recognition.bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 0
 .PHONY : samples/CMakeFiles/test_drawbook_recognition.bin.dir/rule
 
 # Convenience name for target.

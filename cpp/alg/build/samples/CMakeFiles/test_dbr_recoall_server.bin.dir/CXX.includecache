@@ -7532,7 +7532,7 @@ opencv2/imgproc/types_c.h
 opencv2/core/core_c.h
 /disk1/deeplearning/local_install/include/opencv2/imgproc/opencv2/core/core_c.h
 
-/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/samples/dbr_recoall_server.cpp
+/home/app/project/test/cpp/alg/samples/dbr_recoall_server.cpp
 iostream
 -
 chrono
@@ -7550,5 +7550,5 @@ boost/algorithm/string.hpp
 boost/lexical_cast.hpp
 -
 drawbook.h
-/home/app/sn_drawbook_sdk_v0.0.2_linux_x64/samples/drawbook.h
+/home/app/project/test/cpp/alg/samples/drawbook.h
 

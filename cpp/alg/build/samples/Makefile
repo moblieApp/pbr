@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/app/sn_drawbook_sdk_v0.0.2_linux_x64
+CMAKE_SOURCE_DIR = /home/app/project/test/cpp/alg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build
+CMAKE_BINARY_DIR = /home/app/project/test/cpp/alg/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,14 +113,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/samples/CMakeFiles/progress.marks
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f CMakeFiles/Makefile2 samples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build/CMakeFiles 0
+	cd /home/app/project/test/cpp/alg/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles /home/app/project/test/cpp/alg/build/samples/CMakeFiles/progress.marks
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/app/project/test/cpp/alg/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f CMakeFiles/Makefile2 samples/clean
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/clean
 .PHONY : clean
 
 # The main clean target
@@ -129,22 +129,36 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f CMakeFiles/Makefile2 samples/preinstall
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f CMakeFiles/Makefile2 samples/preinstall
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/app/project/test/cpp/alg/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+samples/CMakeFiles/test_dbr_create_hander.bin.dir/rule:
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_create_hander.bin.dir/rule
+.PHONY : samples/CMakeFiles/test_dbr_create_hander.bin.dir/rule
+
+# Convenience name for target.
+test_dbr_create_hander.bin: samples/CMakeFiles/test_dbr_create_hander.bin.dir/rule
+.PHONY : test_dbr_create_hander.bin
+
+# fast build rule for target.
+test_dbr_create_hander.bin/fast:
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_create_hander.bin.dir/build.make samples/CMakeFiles/test_dbr_create_hander.bin.dir/build
+.PHONY : test_dbr_create_hander.bin/fast
+
+# Convenience name for target.
 samples/CMakeFiles/test_dbr_feas_service.bin.dir/rule:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_feas_service.bin.dir/rule
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_feas_service.bin.dir/rule
 .PHONY : samples/CMakeFiles/test_dbr_feas_service.bin.dir/rule
 
 # Convenience name for target.
@@ -153,12 +167,12 @@ test_dbr_feas_service.bin: samples/CMakeFiles/test_dbr_feas_service.bin.dir/rule
 
 # fast build rule for target.
 test_dbr_feas_service.bin/fast:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/build
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/build
 .PHONY : test_dbr_feas_service.bin/fast
 
 # Convenience name for target.
 samples/CMakeFiles/test_dbr_recoall_server.bin.dir/rule:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_recoall_server.bin.dir/rule
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_recoall_server.bin.dir/rule
 .PHONY : samples/CMakeFiles/test_dbr_recoall_server.bin.dir/rule
 
 # Convenience name for target.
@@ -167,12 +181,12 @@ test_dbr_recoall_server.bin: samples/CMakeFiles/test_dbr_recoall_server.bin.dir/
 
 # fast build rule for target.
 test_dbr_recoall_server.bin/fast:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build
 .PHONY : test_dbr_recoall_server.bin/fast
 
 # Convenience name for target.
 samples/CMakeFiles/test_dbr_recogition_server.bin.dir/rule:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_recogition_server.bin.dir/rule
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_dbr_recogition_server.bin.dir/rule
 .PHONY : samples/CMakeFiles/test_dbr_recogition_server.bin.dir/rule
 
 # Convenience name for target.
@@ -181,12 +195,12 @@ test_dbr_recogition_server.bin: samples/CMakeFiles/test_dbr_recogition_server.bi
 
 # fast build rule for target.
 test_dbr_recogition_server.bin/fast:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build
 .PHONY : test_dbr_recogition_server.bin/fast
 
 # Convenience name for target.
 samples/CMakeFiles/test_drawbook_recognition.bin.dir/rule:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_drawbook_recognition.bin.dir/rule
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f CMakeFiles/Makefile2 samples/CMakeFiles/test_drawbook_recognition.bin.dir/rule
 .PHONY : samples/CMakeFiles/test_drawbook_recognition.bin.dir/rule
 
 # Convenience name for target.
@@ -195,15 +209,39 @@ test_drawbook_recognition.bin: samples/CMakeFiles/test_drawbook_recognition.bin.
 
 # fast build rule for target.
 test_drawbook_recognition.bin/fast:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/build
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/build
 .PHONY : test_drawbook_recognition.bin/fast
+
+dbr_create_hander.o: dbr_create_hander.cpp.o
+.PHONY : dbr_create_hander.o
+
+# target to build an object file
+dbr_create_hander.cpp.o:
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_create_hander.bin.dir/build.make samples/CMakeFiles/test_dbr_create_hander.bin.dir/dbr_create_hander.cpp.o
+.PHONY : dbr_create_hander.cpp.o
+
+dbr_create_hander.i: dbr_create_hander.cpp.i
+.PHONY : dbr_create_hander.i
+
+# target to preprocess a source file
+dbr_create_hander.cpp.i:
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_create_hander.bin.dir/build.make samples/CMakeFiles/test_dbr_create_hander.bin.dir/dbr_create_hander.cpp.i
+.PHONY : dbr_create_hander.cpp.i
+
+dbr_create_hander.s: dbr_create_hander.cpp.s
+.PHONY : dbr_create_hander.s
+
+# target to generate assembly for a file
+dbr_create_hander.cpp.s:
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_create_hander.bin.dir/build.make samples/CMakeFiles/test_dbr_create_hander.bin.dir/dbr_create_hander.cpp.s
+.PHONY : dbr_create_hander.cpp.s
 
 dbr_feas_service.o: dbr_feas_service.cpp.o
 .PHONY : dbr_feas_service.o
 
 # target to build an object file
 dbr_feas_service.cpp.o:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/dbr_feas_service.cpp.o
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/dbr_feas_service.cpp.o
 .PHONY : dbr_feas_service.cpp.o
 
 dbr_feas_service.i: dbr_feas_service.cpp.i
@@ -211,7 +249,7 @@ dbr_feas_service.i: dbr_feas_service.cpp.i
 
 # target to preprocess a source file
 dbr_feas_service.cpp.i:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/dbr_feas_service.cpp.i
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/dbr_feas_service.cpp.i
 .PHONY : dbr_feas_service.cpp.i
 
 dbr_feas_service.s: dbr_feas_service.cpp.s
@@ -219,7 +257,7 @@ dbr_feas_service.s: dbr_feas_service.cpp.s
 
 # target to generate assembly for a file
 dbr_feas_service.cpp.s:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/dbr_feas_service.cpp.s
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_feas_service.bin.dir/build.make samples/CMakeFiles/test_dbr_feas_service.bin.dir/dbr_feas_service.cpp.s
 .PHONY : dbr_feas_service.cpp.s
 
 dbr_recoall_server.o: dbr_recoall_server.cpp.o
@@ -227,7 +265,7 @@ dbr_recoall_server.o: dbr_recoall_server.cpp.o
 
 # target to build an object file
 dbr_recoall_server.cpp.o:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/dbr_recoall_server.cpp.o
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/dbr_recoall_server.cpp.o
 .PHONY : dbr_recoall_server.cpp.o
 
 dbr_recoall_server.i: dbr_recoall_server.cpp.i
@@ -235,7 +273,7 @@ dbr_recoall_server.i: dbr_recoall_server.cpp.i
 
 # target to preprocess a source file
 dbr_recoall_server.cpp.i:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/dbr_recoall_server.cpp.i
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/dbr_recoall_server.cpp.i
 .PHONY : dbr_recoall_server.cpp.i
 
 dbr_recoall_server.s: dbr_recoall_server.cpp.s
@@ -243,7 +281,7 @@ dbr_recoall_server.s: dbr_recoall_server.cpp.s
 
 # target to generate assembly for a file
 dbr_recoall_server.cpp.s:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/dbr_recoall_server.cpp.s
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recoall_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recoall_server.bin.dir/dbr_recoall_server.cpp.s
 .PHONY : dbr_recoall_server.cpp.s
 
 dbr_recogition_server.o: dbr_recogition_server.cpp.o
@@ -251,7 +289,7 @@ dbr_recogition_server.o: dbr_recogition_server.cpp.o
 
 # target to build an object file
 dbr_recogition_server.cpp.o:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/dbr_recogition_server.cpp.o
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/dbr_recogition_server.cpp.o
 .PHONY : dbr_recogition_server.cpp.o
 
 dbr_recogition_server.i: dbr_recogition_server.cpp.i
@@ -259,7 +297,7 @@ dbr_recogition_server.i: dbr_recogition_server.cpp.i
 
 # target to preprocess a source file
 dbr_recogition_server.cpp.i:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/dbr_recogition_server.cpp.i
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/dbr_recogition_server.cpp.i
 .PHONY : dbr_recogition_server.cpp.i
 
 dbr_recogition_server.s: dbr_recogition_server.cpp.s
@@ -267,7 +305,7 @@ dbr_recogition_server.s: dbr_recogition_server.cpp.s
 
 # target to generate assembly for a file
 dbr_recogition_server.cpp.s:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/dbr_recogition_server.cpp.s
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_dbr_recogition_server.bin.dir/build.make samples/CMakeFiles/test_dbr_recogition_server.bin.dir/dbr_recogition_server.cpp.s
 .PHONY : dbr_recogition_server.cpp.s
 
 drawbook_recognition.o: drawbook_recognition.cpp.o
@@ -275,7 +313,7 @@ drawbook_recognition.o: drawbook_recognition.cpp.o
 
 # target to build an object file
 drawbook_recognition.cpp.o:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.o
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.o
 .PHONY : drawbook_recognition.cpp.o
 
 drawbook_recognition.i: drawbook_recognition.cpp.i
@@ -283,7 +321,7 @@ drawbook_recognition.i: drawbook_recognition.cpp.i
 
 # target to preprocess a source file
 drawbook_recognition.cpp.i:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.i
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.i
 .PHONY : drawbook_recognition.cpp.i
 
 drawbook_recognition.s: drawbook_recognition.cpp.s
@@ -291,7 +329,7 @@ drawbook_recognition.s: drawbook_recognition.cpp.s
 
 # target to generate assembly for a file
 drawbook_recognition.cpp.s:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.s
+	cd /home/app/project/test/cpp/alg/build && $(MAKE) -f samples/CMakeFiles/test_drawbook_recognition.bin.dir/build.make samples/CMakeFiles/test_drawbook_recognition.bin.dir/drawbook_recognition.cpp.s
 .PHONY : drawbook_recognition.cpp.s
 
 # Help Target
@@ -306,10 +344,14 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test_dbr_create_hander.bin"
 	@echo "... test_dbr_feas_service.bin"
 	@echo "... test_dbr_recoall_server.bin"
 	@echo "... test_dbr_recogition_server.bin"
 	@echo "... test_drawbook_recognition.bin"
+	@echo "... dbr_create_hander.o"
+	@echo "... dbr_create_hander.i"
+	@echo "... dbr_create_hander.s"
 	@echo "... dbr_feas_service.o"
 	@echo "... dbr_feas_service.i"
 	@echo "... dbr_feas_service.s"
@@ -333,6 +375,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/app/sn_drawbook_sdk_v0.0.2_linux_x64/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/app/project/test/cpp/alg/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
